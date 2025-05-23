@@ -44,4 +44,4 @@ jobs:
         run: |
           scp -r . user@your-server.com:/path/to/app
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.myToken2025}}
+          SSH_PRIVATE_KEY: ${{ secrets.myToken2025 }}
