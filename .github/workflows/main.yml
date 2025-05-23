@@ -29,9 +29,16 @@ jobs:
     
     runs-on: ubuntu-latest
     steps:
- 
+      - name: Debug token presence
+        run: |
+          if [ -z "${{ secrets.myToken2025 }}" ]; then
+            echo "Token is empty or not found!"
+            exit 1
+          else
+            echo "Token is present."
+          fi
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.myToken2025 }} #this is the key of the access token
+          github_token: ${{ secrets.GITHUB_TOKEN}} #this is the key of the access token
