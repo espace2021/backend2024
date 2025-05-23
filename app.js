@@ -2,6 +2,8 @@ const express=require('express');
 const  mongoose =require("mongoose");
 const dotenv =require('dotenv');
 const cors = require('cors');
+const path = require('path')
+
 
 const categorieRouter =require("./routes/categorie.route") ;
 const scategorieRouter =require("./routes/scategorie.route");
@@ -18,13 +20,10 @@ app.use(cors())
 //BodyParser Middleware
 app.use(express.json()); 
 
-// Servir les fichiers statiques React
-app.use(express.static(path.join(__dirname, 'dist')));
+//dist reactjs
+app.use(express.static(path.join(__dirname, './dist'))); // Route pour les pages non trouvées, redirige vers index.html 
+app.get('*', (req, res) => { res.sendFile(path.join(__dirname, './dist/index.html')); });
 
-// Pour toutes les autres routes, servir index.html (SPA)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
 
 mongoose.set("strictQuery", false);
 
