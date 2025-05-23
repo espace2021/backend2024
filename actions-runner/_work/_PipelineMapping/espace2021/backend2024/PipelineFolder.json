@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "espace2021/backend2024",
+  "pipelineDirectory": "backend2024",
+  "workspaceDirectory": "backend2024\\backend2024",
+  "repositories": {
+    "espace2021/backend2024": {
+      "repositoryPath": "backend2024\\backend2024",
+      "lastRunOn": "05/23/2025 11:50:44 +02:00"
+    }
+  },
+  "lastRunOn": "05/23/2025 11:55:36 +02:00"
+}
