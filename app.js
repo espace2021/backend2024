@@ -30,11 +30,11 @@ mongoose.connect(process.env.DATABASE,{
  console.log('Impossible de se connecter à la base de données', err);
  process.exit();
 });
-
+/*
 app.get("/",(req,res)=>{
 res.send("bonjour");
 });
-
+*/
 //les routes
 
 app.use('/api/categories', categorieRouter);
