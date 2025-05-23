@@ -25,23 +25,19 @@ jobs:
   # Deploy Job
   deploy:
    
-    name: Deploy to Server
+      deploy:
+   
     needs: build
+    
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Download artifact
+        uses: actions/download-artifact@v3
         with:
-          node-version: 18.x
+          name: poduction file
+          path: ./ecommerce/build
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Deploy via SSH
-        run: |
-          scp -r . user@your-server.com:/path/to/app
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.myToken2025 }}
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.myToken2025 }} #this is the key of the access token
