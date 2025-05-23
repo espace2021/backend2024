@@ -1643,3 +1643,27 @@
 [2025-05-23 14:53:36Z INFO CredentialManager] Creating type OAuth
 [2025-05-23 14:53:36Z INFO CredentialManager] Creating credential type: OAuth
 [2025-05-23 14:53:36Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file D:\Sandra\MERN\2024\backend\actions-runner\.credentials_rsaparams
+[2025-05-23 14:54:27Z INFO ConfigurationStore] HasCredentials()
+[2025-05-23 14:54:27Z INFO ConfigurationStore] stored True
+[2025-05-23 14:54:27Z INFO CredentialManager] GetCredentialProvider
+[2025-05-23 14:54:27Z INFO CredentialManager] Creating type OAuth
+[2025-05-23 14:54:27Z INFO CredentialManager] Creating credential type: OAuth
+[2025-05-23 14:54:27Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file D:\Sandra\MERN\2024\backend\actions-runner\.credentials_rsaparams
+[2025-05-23 14:55:17Z INFO ConfigurationStore] HasCredentials()
+[2025-05-23 14:55:17Z INFO ConfigurationStore] stored True
+[2025-05-23 14:55:17Z INFO CredentialManager] GetCredentialProvider
+[2025-05-23 14:55:17Z INFO CredentialManager] Creating type OAuth
+[2025-05-23 14:55:17Z INFO CredentialManager] Creating credential type: OAuth
+[2025-05-23 14:55:17Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file D:\Sandra\MERN\2024\backend\actions-runner\.credentials_rsaparams
+[2025-05-23 14:56:08Z INFO ConfigurationStore] HasCredentials()
+[2025-05-23 14:56:08Z INFO ConfigurationStore] stored True
+[2025-05-23 14:56:08Z INFO CredentialManager] GetCredentialProvider
+[2025-05-23 14:56:08Z INFO CredentialManager] Creating type OAuth
+[2025-05-23 14:56:08Z INFO CredentialManager] Creating credential type: OAuth
+[2025-05-23 14:56:08Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file D:\Sandra\MERN\2024\backend\actions-runner\.credentials_rsaparams
+[2025-05-23 14:56:58Z INFO ConfigurationStore] HasCredentials()
+[2025-05-23 14:56:58Z INFO ConfigurationStore] stored True
+[2025-05-23 14:56:58Z INFO CredentialManager] GetCredentialProvider
+[2025-05-23 14:56:58Z INFO CredentialManager] Creating type OAuth
+[2025-05-23 14:56:58Z INFO CredentialManager] Creating credential type: OAuth
+[2025-05-23 14:56:58Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file D:\Sandra\MERN\2024\backend\actions-runner\.credentials_rsaparams

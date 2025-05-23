@@ -18,6 +18,14 @@ app.use(cors())
 //BodyParser Middleware
 app.use(express.json()); 
 
+// Servir les fichiers statiques React
+app.use(express.static(path.join(__dirname, 'dist')));
+
+// Pour toutes les autres routes, servir index.html (SPA)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
 mongoose.set("strictQuery", false);
 
 // Connexion à la base données
