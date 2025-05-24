@@ -1,0 +1,55 @@
+name: CI/CD Node.js with SonarQube
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build-and-analyze:
+    name: Build, Test & SonarQube Analysis
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Run SonarQube Scanner
+        uses: sonarsource/sonarqube-scan-action@master
+        with:
+          args: >
+            -Dsonar.projectKey=mySonarToken
+            -Dsonar.sources=.
+            -Dsonar.exclusions=node_modules/**
+            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: https://sonarqube.mycompany.com  # Remplacez par l’URL de votre SonarQube
+
+  deploy:
+    name: Deploy (example step)
+    runs-on: ubuntu-latest
+    needs: build-and-analyze
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Ajoutez ici vos étapes de déploiement (ex: vers Vercel, Heroku, Docker, etc.)
+      - name: Example deployment step
+        run: echo "Deploying application..."
