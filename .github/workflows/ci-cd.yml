@@ -35,7 +35,7 @@ jobs:
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: http://localhost:9000  # Remplacez par l’URL de votre SonarQube
+          SONAR_HOST_URL: https://7092-41-229-78-5.ngrok-free.app  # Remplacez par l’URL de votre SonarQube généré par ngrok
 
   deploy:
     name: Deploy (example step)
