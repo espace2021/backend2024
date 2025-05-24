@@ -30,6 +30,7 @@ jobs:
         with:
           args: >
             -Dsonar.projectKey=mySonarToken
+            -Dsonar.projectName=MyProjectNodeJS
             -Dsonar.sources=.
             -Dsonar.exclusions=node_modules/**
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
