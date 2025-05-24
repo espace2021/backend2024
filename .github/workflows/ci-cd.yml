@@ -35,7 +35,7 @@ jobs:
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: https://sonarqube.mycompany.com  # Remplacez par l’URL de votre SonarQube
+          SONAR_HOST_URL: http://localhost:9000  # Remplacez par l’URL de votre SonarQube
 
   deploy:
     name: Deploy (example step)
